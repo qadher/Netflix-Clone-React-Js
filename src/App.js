@@ -7,13 +7,17 @@ import {
   Route,
   
 } from "react-router-dom";
+import LoginScreen from './Screens/LoginScreen';
 
 function App() {
+  const user = null;
+
   return (
     <div className="App">
-      
-
-      <Router>
+  <Router>
+    {!user ? (
+      <LoginScreen />
+    ) : (
         <Switch>
           
           <Route exact path="/">
@@ -21,6 +25,7 @@ function App() {
           </Route>
 
         </Switch>
+         )}
     </Router>
 
     </div>
